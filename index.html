@@ -46,17 +46,7 @@
 			}
 			
 			/* SPECIFIC DIV CLASSES */
-			div {
-				border-style:none;
-			}
-			
-			div.intro {
-				width: 100px;
-				height: 200px;
-				text-align: center;
-				background-color: white;
-				background-position: center;
-			}
+			div {border-style:dashed;}
 			
 			div.header {
 				width:100%; 
@@ -66,6 +56,13 @@
 				
 				background-color:rgb(50,50,50);
 			}	
+			
+			div.left-half {
+				width:50%;
+				left:0%;
+				
+				overflow-x:hidden
+			}
 			
 			div.background {
 				background-position: center;
@@ -77,7 +74,7 @@
 				height:75%;
 				width:100%;
 				background-image: url("bg.jpg");
-				background-attachment: fixed;
+				background-attachment:fixed;
 			}
 			div.bg2 {
 				background-image: url("bg2.svg");
@@ -87,32 +84,48 @@
 				background-image: url("bg3.jpg");
 			}
 			
-			/* FORMATTING DIV CLASSES */
-			div.horizontal-centering {
-				margin:auto;
+			/* FORMATTING CLASSES */
+			.center-x {
+				position:relative;
+				left:50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform:perspective(1px) translateX(-50%); !important
 			}
-			div.vertical-centering {
+			.center-y {
 				position:relative;
 				top:50%;
 				-webkit-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
-				transform:perspective(1px) translateY(-50%);
+				transform:perspective(1px) translateY(-50%); !important
 			}
-			div.straight-backing {
+			.center {
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+			.full-border {
 				width:100%;
-				padding:1.5em;
+				padding-top:1.5em;
+				padding-bottom:1.5em;
 			}
-			div.bubble-backing {
+			.rounded-border {
 				width:70%;
 				padding:1em;
 				border-radius:15px;
 			}
-			div.white-backing {background-color:rgba(255,255,255,0.45);}
-			div.light-grey-backing {background-color:rgba(155,155,155,0.45);}
-			div.white-line {
+			.w-back {background-color:rgba(255,255,255,0.45);}
+			.lg-back {background-color:rgba(155,155,155,0.45);}
+			.w-line {
 				background-color:rgba(255,255,255,0.4);
 				height:.15em;
 				width:10%;
+			}
+			
+			/* UNIQUE ELEMENTS */
+			#profile-pic {
+				height:100%;
+				width:auto;
 			}
 			
 		</style>
@@ -124,22 +137,26 @@
 		<div style="width:100; height:10%;"></div> <!-- Alignment -->
 	
 		<!-- SPLASH -->
-		<div class="background bg1" id="background">
-			<div class="vertical-centering horizontal-centering white-backing bubble-backing">	
+		<div class="background bg1 center" id="background">
+			<div class="w-back rounded-border">	
 				<h1>Caleb Choi</h1>
-				<div class="white-line horizontal-centering"></div>
+				<div class="w-line center-x"></div>
 				<h4>Welcome to my personal website!</h4>
 			</div>
-			
 		</div>
 		
 		<!-- INTRO -->
-		<div class="background bg2" id="introduction">
-			<div class="white-backing straight-backing" style="padding-top:3.5%"></div>
-			<div class="light-grey-backing horizontal-centering straight-backing">
+		<div class="background bg2" id="profile">
+			<div class="w-back full-border" style="padding-top:5%"></div>
+			<div class="lg-back center-x full-border">
 				<h3>ABOUT ME</h3>
 			</div>
-			<div class="white-backing straight-backing" style="padding-top:3.5%"></div>
+			
+			<div class="left-half w-back center">
+				<div style="height:250px; overflow:hidden;">
+					<img src="profile.jpg" id="profile-pic">
+				</div>
+			</div>
 		</div>
 		
 		<!-- CONTACT -->
