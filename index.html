@@ -41,7 +41,7 @@
 				font-size:1.7em;
 				font-family:Raleway,sans-serif;
 				font-weight:lighter;
-				color:rgba(10,10,10,0.65);
+				color:rgb(70,70,70);
 				
 				text-shadow:0px 2px 2px rgba(245,245,245,0.25);
 				text-align:center;
@@ -148,7 +148,14 @@
 							max-width:100%;
 						}
 						#about-description {
+							flex-flow:column nowrap;
 						}
+							.about-description-text {
+								color:rgb(60,60,60);
+								font-size:1.7em;
+								font-weight:lighter;
+								text-align:center;
+							}
 							#about-line {
 								background-color:rgba(137, 195, 115,.8);
 								min-height:0.1em;
@@ -201,17 +208,22 @@
 						<img src="profile.jpg" alt="PLACHOLDER IMAGE: TO BE REPLACED" id="profile-picture">
 					</div>
 					<div class="center about-section" id="about-description">
-						<h4>
+						<p class="about-description-text">
 							<strong>Hello!</strong> I am currently a Grade 12 student at Richmond Hill High School. 
 							Apart from studies, I use my free time programming, composing music, and watching silly videos 
-								<br><br>
-								<div id="about-line"></div>
-								<br>
+						</p>
+						<div id="about-line"></div>
+						<p class="about-description-text">
 							In the coming fall season, I will be attending the University of Waterloo for Software Engineering!
-						</h4>
+						</p>
 					</div>
 				</div> 
 			</div>
 		</div>
+		
+		<!-- PROJECTS -->
+		<div id="projects">
+		</div>
+		
 	</body>
 </html>
