@@ -71,7 +71,7 @@
 			li a {
 				display:block;
 				color:rgb(230,230,230);
-				padding:1.4em;
+				padding:3.4vh;
 				text-align:center;
 				text-decoration:none;
 			}
@@ -84,6 +84,8 @@
 				background:url(bg.jpg) no-repeat fixed center;
 				background-size:cover;
 				
+				box-sizing:border-box;
+				padding:3em;
 				min-height:90vh;
 			}
 			#splash-text {
@@ -124,28 +126,41 @@
 			#about-section {
 				box-sizing:border-box;
 				position:relative;
-				height:80vh;
+				height:35em;
 			}
 			#about-section-left {
 				box-sizing:border-box;
 				position:absolute;
 				
 				right:50%;
-				width:30%;
+				width:100%;
 				height:100%;
-				padding:4em 2em 4em 4em;
+				padding:10vh 5vh 10vh 10vh;
 			}
 			#about-section-right {
 				box-sizing:border-box;
 				position:absolute;
 				
 				left:50%;
-				width:30%;
 				height:100%;
+				padding:10vh 10vh 10vh 5vh;
 			}
-			#about-profile-wrapper {
+			#about-profile-pic-wrapper {
+				background:rgba(0,0,0,0.1);
 				width:100%;
 				height:100%;
+			}
+			#about-profile-text-wrapper {
+				background:rgba(255,255,255,0.2);
+				width:100%;
+				height:100%;
+			}
+			#about-profile {
+				max-width:42vw;
+				height:100%;
+			}
+			.about-paragraph {
+				
 			}
 			
 			/* GENERAL ATTRIBUTES */
@@ -189,11 +204,17 @@
 			
 			<div id="about-section">
 				<div class="center" id="about-section-left">
-					<div class="center" id="about-profile-wrapper"> <!-- check to see if center is needed -->
-						asdasd
+					<div class="" id="about-profile-pic-wrapper"> <!-- HOW TO ALIGN RIGHT? -->
+						<img src="profile.jpg" id="about-profile" align="right">
 					</div>
 				</div>
-				<div id="about-section-right">dsa
+				<div id="about-section-right">
+					<div class="center" id="about-profile-text-wrapper"> <!-- check to see if center is needed -->
+						<p class="about-paragraph">
+							Hello! I am currently a Grade 12 student at Richmond Hill High School. Apart from studies, I use my free time programming, composing music, and watching silly videos</p>
+						<p class="about-paragraph">
+							In the coming fall season, I will be studying Software Engineering at the University of Waterloo</p>
+					</div>
 				</div>
 			</div>
 		</div>
