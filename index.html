@@ -6,14 +6,17 @@
 			href="https://fonts.googleapis.com/css?family=Raleway|Cabin">
 		<style>
 			body, html {
+				max-width:100%;
 				height:100%;
 				padding:0;
 				margin:0;
-				overflow-x:hidden;
 				font-family:Cabin,sans-serif;
 			}
 			
-			div {border-style:none}
+			div {
+				border-style:none;
+				border-width:1px;
+			}
 			
 			h1 {
 				font-size:5em;
@@ -52,6 +55,7 @@
 				position:fixed;
 				width:100%;
 				overflow:hidden;
+				z-index:0;
 				
 				list-style-type:none;
 				background-color:rgba(0,0,0,0.8);
@@ -105,11 +109,12 @@
 			}
 			#about-header {
 				background-color:rgba(100,100,100,0.2);
-				padding:4em 0 3em 0;
+				padding:4em 0 4em 0;
 			}
 			#about-header-text {
 				background-color:rgba(100,100,100,0.2);
 				padding:0.15em;
+				box-sizing:border-box;
 				width:100%;
 				
 				border-style:solid;
