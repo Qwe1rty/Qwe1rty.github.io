@@ -14,7 +14,7 @@
 			}
 			
 			div {
-				border-style:dashed;
+				border-style:none;
 				border-width:1px;
 			}
 			
@@ -29,7 +29,7 @@
 				margin:0;
 			}
 			h3 {
-				font-size:2.4em;
+				font-size:2.2em;
 				font-family:Raleway,sans-serif;
 				color:black;
 				
@@ -39,7 +39,7 @@
 			}
 			h4 {
 				font-size:1.7em;
-				font-family:Rale],sans-serif;
+				font-family:Raleway,sans-serif;
 				font-weight:lighter;
 				color:rgba(10,10,10,0.65);
 				
@@ -88,20 +88,20 @@
 				padding:3em;
 				min-height:90vh;
 			}
-			#splash-text {
-				background-color:rgba(255,255,255,0.5);
-				
-				border-radius:1em;
-				box-sizing:border-box;
-				width:70%;
-				padding:2em;
-			}
-			#splash-line {
-				min-height:0.1em;
-				width:10%;
-				margin:auto;
-				background-color:rgba(255,255,255,0.4);
-			}
+				#splash-text {
+					background-color:rgba(255,255,255,0.5);
+					
+					border-radius:1em;
+					box-sizing:border-box;
+					width:70%;
+					padding:2em;
+				}
+				#splash-line {
+					min-height:0.1em;
+					width:10%;
+					margin:auto;
+					background-color:rgba(255,255,255,0.4);
+				}
 			
 			/* ABOUT SECTION */
 			#about {
@@ -109,59 +109,52 @@
 				background-size:cover;
 				position:relative;
 			}
-			#about-header {
-				background-color:rgba(100,100,100,0.2);
-				padding:4em 0 4em 0;
-			}
-			#about-header-text {
-				background-color:rgba(100,100,100,0.2);
-				padding:0.15em;
-				box-sizing:border-box;
-				width:100%;
-				
-				border:4px solid rgba(255,255,255,0.4);
-				border-left:0;
-				border-right:0;
-			}
-			#about-section {
-				box-sizing:border-box;
-				position:relative;
-				height:35em;
-			}
-			#about-section-left {
-				box-sizing:border-box;
-				position:absolute;
-				
-				right:50%;
-				width:100%;
-				height:100%;
-				padding:10vh 5vh 10vh 10vh;
-			}
-			#about-section-right {
-				box-sizing:border-box;
-				position:absolute;
-				
-				left:50%;
-				height:100%;
-				padding:10vh 10vh 10vh 5vh;
-			}
-			#about-profile-pic-wrapper {
-				background:rgba(0,0,0,0.1);
-				width:100%;
-				height:100%;
-			}
-			#about-profile-text-wrapper {
-				background:rgba(255,255,255,0.2);
-				width:100%;
-				height:100%;
-			}
-			#about-profile {
-				max-width:42vw;
-				height:100%;
-			}
-			.about-paragraph {
-				
-			}
+				#about-header {
+					background-color:rgba(100,100,100,0.2);
+					padding:5em 0 5em 0;
+				}
+					#about-header-text {
+						background-color:rgba(100,100,100,0.2);
+						padding:0.2em;
+						box-sizing:border-box;
+						width:100%;
+						
+						border:4px solid rgba(255,255,255,0.4);
+						border-left:0;
+						border-right:0;
+					}
+				#about-body {
+					padding:5% 15% 5% 15%;
+					overflow:auto;
+					
+					box-sizing:border-box;
+					flex-flow:row wrap;
+				}
+					#about-section-wrapper {
+						background-color:rgba(100,100,100,0.2);
+						border:4px solid rgba(255,255,255,0.4);
+						box-sizing:border-box;
+						flex-flow:row wrap;
+						
+						width:100%;
+						height:100%;
+					}
+						.about-section {
+							flex:1 1 40%;
+							padding:2em;
+						}
+						#profile-picture {
+							min-width:100%;
+							max-width:100%;
+						}
+						#about-description {
+						}
+							#about-line {
+								background-color:rgba(137, 195, 115,.8);
+								min-height:0.1em;
+								width:40%;
+								margin:auto;
+							}
 			
 			/* GENERAL ATTRIBUTES */
 			.center {
@@ -202,20 +195,22 @@
 				</div>
 			</div>
 			
-			<div id="about-section">
-				<div class="center" id="about-section-left">
-					<div class="" id="about-profile-pic-wrapper"> <!-- HOW TO ALIGN RIGHT? -->
-						<img src="profile.jpg" id="about-profile" align="right">
+			<div class="center" id="about-body">
+				<div class="center" id="about-section-wrapper"> 
+					<div class="center about-section" id="about-profile">
+						<img src="profile.jpg" alt="PLACHOLDER IMAGE: TO BE REPLACED" id="profile-picture">
 					</div>
-				</div>
-				<div id="about-section-right">
-					<div class="center" id="about-profile-text-wrapper"> <!-- check to see if center is needed -->
-						<p class="about-paragraph">
-							Hello! I am currently a Grade 12 student at Richmond Hill High School. Apart from studies, I use my free time programming, composing music, and watching silly videos</p>
-						<p class="about-paragraph">
-							In the coming fall season, I will be studying Software Engineering at the University of Waterloo</p>
+					<div class="center about-section" id="about-description">
+						<h4>
+							<strong>Hello!</strong> I am currently a Grade 12 student at Richmond Hill High School. 
+							Apart from studies, I use my free time programming, composing music, and watching silly videos 
+								<br><br>
+								<div id="about-line"></div>
+								<br>
+							In the coming fall season, I will be attending the University of Waterloo for Software Engineering!
+						</h4>
 					</div>
-				</div>
+				</div> 
 			</div>
 		</div>
 	</body>
