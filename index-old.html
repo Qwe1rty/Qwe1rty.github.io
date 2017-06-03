@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"
+			href="https://fonts.googleapis.com/css?family=Raleway|Cabin">
+		<style>
+			
+			/* PAGE ELEMENTS */
+			body, html {
+				height: 100%;
+				margin: 0;
+				padding: 0;	
+				z-index: 2;
+				
+				font-family:Cabin,sans-serif;
+			}
+			
+			h1 {
+				font-size:5em;
+				font-family:Raleway,sans-serif;
+				/* font-weight:lighter; */
+				color:black;
+				
+				text-shadow:0px 4px 5px rgba(245,245,245,0.35);
+				text-align:center;
+				margin:0;
+			}
+			h3 {
+				font-size:2.4em;
+				font-family:Raleway,sans-serif;
+				color:black;
+				
+				text-shadow:0px 2px 3px rgba(245,245,245,0.35);
+				text-align:center;
+				margin:0;
+			}
+			h4 {
+				font-size:1.7em;
+				font-family:Rale],sans-serif;
+				font-weight:lighter;
+				color:rgba(10,10,10,0.65);
+				
+				text-shadow:0px 2px 2px rgba(245,245,245,0.25);
+				text-align:center;
+				margin:0;
+			}
+			
+			/* SPECIFIC DIV CLASSES */
+			div {border-style:dashed;}
+			
+			div.header {
+				width:100%; 
+				height:10%;
+				z-index:4;
+				position:fixed;
+				
+				background-color:rgb(50,50,50);
+			}	
+			
+			div.left-half {
+				width:50%;
+				left:0%;
+				
+				overflow-x:hidden
+			}
+			
+			div.background {
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				opacity: 0.8;
+			}
+			div.bg1 {
+				height:75%;
+				width:100%;
+				background-image: url("bg.jpg");
+				background-attachment:fixed;
+				align-items:center
+			}
+			div.bg2 {
+				background-image: url("bg2.svg");
+			}
+			div.bg3 {
+				height: 75%;
+				background-image: url("bg3.jpg");
+			}
+			
+			/* FORMATTING CLASSES */
+			.center-x {
+				position:relative;
+				left:50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform:perspective(1px) translateX(-50%); !important
+			}
+			.center-y {
+				position:relative;
+				top:50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform:perspective(1px) translateY(-50%); !important
+			}
+			.center {
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+			.full-border {
+				width:100%;
+				padding-top:1.5em;
+				padding-bottom:1.5em;
+			}
+			.rounded-border {
+				width:70%;
+				padding:1em;
+				border-radius:15px;
+			}
+			.w-back {background-color:rgba(255,255,255,0.45);}
+			.lg-back {background-color:rgba(155,155,155,0.45);}
+			.w-line {
+				background-color:rgba(255,255,255,0.4);
+				height:.15em;
+				width:10%;
+			}
+			
+			/* UNIQUE ELEMENTS */
+			#profile-pic {
+				width:60%;
+				height:auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+		<!-- HEADER -->
+		<div class="header" id="header"></div>
+		<div style="width:100; height:10%;"></div> <!-- Alignment -->
+	
+		<!-- SPLASH -->
+		<div class="background bg1 center" id="background">
+			<div class="w-back rounded-border">	
+				<h1>Caleb Choi</h1>
+				<div class="w-line"></div>
+				<h4>Welcome to my personal website!</h4>
+			</div>
+		</div>
+		
+		<!-- INTRO -->
+		<div class="background bg2" id="profile">
+			<div class="w-back full-border" style="padding-top:5%"></div>
+			<div class="lg-back center full-border">
+				<h3>ABOUT ME</h3>
+			</div>
+			
+			<div class="left-half w-back center">
+				<img src="profile.jpg" class="center" id="profile-pic">
+			</div>
+		</div>
+		
+		<!-- CONTACT -->
+		<div class="background bg3" id="contact">
+		</div>
+		
+	</body>
+</html>

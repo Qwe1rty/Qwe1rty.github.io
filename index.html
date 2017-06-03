@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css"
 			href="https://fonts.googleapis.com/css?family=Raleway|Cabin">
 		<style>
-			
-			/* PAGE ELEMENTS */
 			body, html {
-				height: 100%;
-				margin: 0;
-				padding: 0;	
-				z-index: 2;
-				
+				height:100%;
+				padding:0;
+				margin:0;
+				overflow-x:hidden;
 				font-family:Cabin,sans-serif;
 			}
+			
+			div {border-style:none}
 			
 			h1 {
 				font-size:5em;
@@ -44,124 +44,116 @@
 				text-align:center;
 				margin:0;
 			}
-			
-			/* SPECIFIC DIV CLASSES */
-			div {border-style:dashed;}
-			
-			div.header {
-				width:100%; 
-				height:10%;
-				z-index:4;
+		
+			/* NAVIGATION BAR */
+			ul {
+				margin:0;
+				padding:0;
 				position:fixed;
-				
-				background-color:rgb(50,50,50);
-			}	
-			
-			div.left-half {
-				width:50%;
-				left:0%;
-				
-				overflow-x:hidden
-			}
-			
-			div.background {
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				opacity: 0.8;
-			}
-			div.bg1 {
-				height:75%;
 				width:100%;
-				background-image: url("bg.jpg");
-				background-attachment:fixed;
+				overflow:hidden;
+				
+				list-style-type:none;
+				background-color:rgba(0,0,0,0.8);
 			}
-			div.bg2 {
-				background-image: url("bg2.svg");
+			li {
+				float:right;
+				border-left:1px solid rgba(255,255,255,0.1);
 			}
-			div.bg3 {
-				height: 75%;
-				background-image: url("bg3.jpg");
+			li.left {
+				float:left;
+				border-right:1px solid rgba(255,255,255,0.05);
+			}
+			li a {
+				display:block;
+				color:rgb(230,230,230);
+				padding:1.4em;
+				text-align:center;
+				text-decoration:none;
+			}
+			li a:hover {
+				background-color:rgb(30,30,30);
 			}
 			
-			/* FORMATTING CLASSES */
-			.center-x {
-				position:relative;
-				left:50%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform:perspective(1px) translateX(-50%); !important
+			/* SPLASH SCREEN */
+			#splash {
+				background:url(bg.jpg) no-repeat fixed center;
+				background-size:cover;
+				
+				min-height:90%;
+				max-height:90%;
 			}
-			.center-y {
-				position:relative;
-				top:50%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform:perspective(1px) translateY(-50%); !important
-			}
-			.center {
-				display:flex;
-				justify-content:center;
-				align-items:center;
-			}
-			.full-border {
-				width:100%;
-				padding-top:1.5em;
-				padding-bottom:1.5em;
-			}
-			.rounded-border {
+			#splash-text {
+				background-color:rgba(255,255,255,0.5);
+				
+				border-radius:1em;
+				box-sizing:border-box;
 				width:70%;
-				padding:1em;
-				border-radius:15px;
+				padding:2em;
 			}
-			.w-back {background-color:rgba(255,255,255,0.45);}
-			.lg-back {background-color:rgba(155,155,155,0.45);}
-			.w-line {
-				background-color:rgba(255,255,255,0.4);
-				height:.15em;
+			#splash-line {
+				min-height:0.1em;
 				width:10%;
+				margin:auto;
+				background-color:rgba(255,255,255,0.4);
 			}
 			
-			/* UNIQUE ELEMENTS */
-			#profile-pic {
-				height:100%;
-				width:auto;
+			/* ABOUT SECTION */
+			#about {
+				background:url(bg2.svg) no-repeat center;
+				background-size:cover;
+			}
+			#about-header {
+				background-color:rgba(100,100,100,0.2);
+				padding:4em 0 3em 0;
+			}
+			#about-header-text {
+				background-color:rgba(100,100,100,0.2);
+				padding:0.15em;
+				width:100%;
+				
+				border-style:solid;
+				border-color:rgba(255,255,255,0.4);
 			}
 			
+			/* GENERAL ATTRIBUTES */
+			.center {
+				display:-webkit-flex;
+				display:flex;
+				-webkit-align-items:center;
+						align-items:center;
+				-webkit-justify-content:center;
+						justify-content:center;
+			}
 		</style>
 	</head>
-	<body>
-	
-		<!-- HEADER -->
-		<div class="header" id="header"></div>
-		<div style="width:100; height:10%;"></div> <!-- Alignment -->
-	
-		<!-- SPLASH -->
-		<div class="background bg1 center" id="background">
-			<div class="w-back rounded-border">	
-				<h1>Caleb Choi</h1>
-				<div class="w-line center-x"></div>
-				<h4>Welcome to my personal website!</h4>
-			</div>
-		</div>
 		
-		<!-- INTRO -->
-		<div class="background bg2" id="profile">
-			<div class="w-back full-border" style="padding-top:5%"></div>
-			<div class="lg-back center-x full-border">
-				<h3>ABOUT ME</h3>
+	<body>
+		<!-- NAVIGATION BAR -->
+		<ul>
+			<li class="left"><a href="#splash">HOME</a></li>
+			<li><a href="#contact">CONTACT</a></li>
+			<li><a href="#projects">PROJECTS</a></li>
+			<li><a href="#about">ABOUT</a></li>
+		</ul>
+		
+		<!-- SPLASH/HOME -->
+		<div class="center" id="splash">
+			<div id="splash-text">
+				<h1>Caleb Choi</h1>
+				<div id="splash-line"></div>
+				<h4>Welcome to my personal website! Enjoy your stay</h4>
 			</div>
 			
-			<div class="left-half w-back center">
-				<div style="height:250px; overflow:hidden;">
-					<img src="profile.jpg" id="profile-pic">
+		</div>
+		
+		<!-- ABOUT -->
+		<div id="about">
+			<div id="about-header">
+				<div id="about-header-text">
+					<h3>ABOUT ME</h3>
 				</div>
 			</div>
 		</div>
-		
-		<!-- CONTACT -->
-		<div class="background bg3" id="contact">
-		</div>
-		
 	</body>
 </html>
