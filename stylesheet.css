@@ -33,7 +33,7 @@ h2 {
 h3 {
 	font-size:2.5em;
 	font-family:Cabin,sans-serif;
-	color:rgb(50,50,50);
+	color:rgb(30,30,30);
 	
 	text-align:left;
 	margin:0;
@@ -194,7 +194,7 @@ ul {
 	}
 	#projects-body {
 		box-sizing:border-box;
-		padding:4% 10% 4% 10%;
+		padding:2% 10% 4% 10%;
 	}
 		#projects-list {
 			height:100%;
@@ -249,13 +249,14 @@ ul {
 					}
 	div .lang-line {
 		min-height:0.05em;
-		margin:1em 0 0.5em 0;
-		width:120px;
+		margin:0.8em 0 0.5em 0;
+		width:10em;
 	}
 	div .lang-text {
+		display:inline-block;
 		font-weight:lighter;
 		padding:0 .2em;
-		max-width:90px;
+		max-width:8em;
 	}
 		div .lang-java {
 			color:white;
@@ -263,7 +264,6 @@ ul {
 		}
 /* GENERAL ATTRIBUTES */
 .center {
-	display:-webkit-flex;
 	display:flex;
 	align-items:center;
 	justify-content:center;
