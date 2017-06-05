@@ -4,6 +4,7 @@ body, html {
 	padding:0;
 	margin:0;
 	font-family:Cabin,serif;
+	font-size:2vh /* OMG IT MAKES IT SO MUCH MORE MAGICALLY MOBILE FRIENDLIER */
 }
 
 div {
@@ -154,7 +155,7 @@ ul {
 			height:100%;
 		}
 			.about-section {
-				flex:1 1 40%;
+				flex:0.85 1 40%;
 				padding:2em;
 			}
 			#profile-picture {
@@ -244,8 +245,7 @@ ul {
 						margin:0.2em 0 0.2em 0;
 						
 						color:rgb(30,30,30);
-						font-size:1.2em;
-						text-height:2em;
+						font-size:1.25em;
 					}
 	div .lang-line {
 		min-height:0.05em;
