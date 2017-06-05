@@ -4,11 +4,11 @@ body, html {
 	padding:0;
 	margin:0;
 	font-family:Cabin,serif;
-	font-size:2vh /* OMG IT MAKES IT SO MUCH MORE MAGICALLY MOBILE FRIENDLIER */
+	font-size:2vh /* do tests */
 }
 
 div {
-	border-style:none;
+	border-style:dashed;
 	border-width:1px;
 }
 
@@ -130,20 +130,24 @@ ul {
 			width:100%;
 			
 			box-sizing:border-box;
-			border:4px solid rgba(255,255,255,0.4);
+			border:4px solid rgb(230,230,230);
 			border-left:0;
 			border-right:0;
 			
 			text-align:center;
 			font-weight:lighter;
 			color:rgb(70,70,70);
+			
+			transition:background-color 0.2s;
+		}
+		#about-header-text:hover {
+			background-color:rgba(230,230,230,1);
 		}
 	#about-body {
 		padding:4% 10% 4% 10%;
 		overflow:auto;
 		
 		box-sizing:border-box;
-		flex-flow:row wrap;
 	}
 		#about-section-wrapper {
 			background-color:rgba(100,100,100,0.2);
@@ -154,7 +158,7 @@ ul {
 			width:100%;
 			height:100%;
 		}
-			.about-section {
+			.about-section-component {
 				flex:0.85 1 40%;
 				padding:2em;
 			}
@@ -166,7 +170,7 @@ ul {
 				flex-flow:column nowrap;
 			}
 				.about-description-text {
-					color:rgb(60,60,60);
+					color:rgb(30,30,30);
 					font-size:1.5em;
 					font-weight:lighter;
 					text-align:center;
@@ -177,17 +181,19 @@ ul {
 					width:40%;
 					margin:auto;
 				}
+	/*
 	#about-footer {
 		padding-top:3em;
 		background-color:rgba(255,255,255,0.2);
-	}
+	} 
+	*/
 
 /* PROJECTS SECTION */
 #projects {
 	position:relative;
 }
 	#projects-header {
-		padding:2em 0;
+		padding:6em 0 2em 0;
 		
 		text-align:center;
 		font-weight:lighter;
@@ -201,13 +207,14 @@ ul {
 			height:100%;
 			
 			display:flex;
-			flex-flow:column no-wrap;
+			flex-flow:column nowrap;
 			box-sizing:border-box; /* see if needed */
 		}
 			.projects-item {
 				border:4px solid rgb(150,150,150);
 				border-radius:.4em;
-				margin:1% 0%;
+				width:100%;
+				margin:.8vh 0%;
 			}	
 			.projects-item a {
 				text-decoration:none;
@@ -226,7 +233,8 @@ ul {
 			}
 				.projects-item-thumbnail {
 					border-radius:.4em;
-					margin:1em;	
+					margin:1em;
+					min-width:10vw;
 					
 					flex:1 0 0;
 					align-items:stretch;
@@ -238,7 +246,7 @@ ul {
 					}
 				.projects-item-description {
 					margin:1em 1em 1em 0;	
-					flex:1 15 60%;
+					flex:1 15 70%;
 					flex-flow:column nowrap;
 				}
 					.projects-item-description p {
@@ -252,16 +260,55 @@ ul {
 		margin:0.8em 0 0.5em 0;
 		width:10em;
 	}
-	div .lang-text {
+	div .lang-text { 
+		color:white;
 		display:inline-block;
 		font-weight:lighter;
 		padding:0 .2em;
 		max-width:8em;
 	}
-		div .lang-java {
-			color:white;
-			background-color:rgb(253, 134, 37);
+		div .lang-java {background-color:rgb(253, 134, 37);}
+		div .lang-html {background-color:rgb(138, 0, 255);}
+		div .lang-misc {background-color:rgb(150,150,150);}
+		
+#contact {
+	background:url(bg-contact.jpg) no-repeat center;
+	background-size:cover;
+	padding-top:5em;
+}
+	#contact-header {
+		background-color:rgba(100,100,100,0.7);
+		padding:2em 0 2em 0;
+	}
+		#contact-header-text {
+			background-color:rgba(200,200,200,0.7);
+			padding:0.5em;
+			width:100%;
+			
+			box-sizing:border-box;
+			border:4px solid rgb(235,235,235);
+			border-left:0;
+			border-right:0;
+			
+			text-align:center;
+			font-weight:lighter;
+			color:rgb(30,30,30);
+			
+			transition:background-color 0.2s;
 		}
+		#contact-header-text:hover {
+			background-color:rgba(235,235,235,1);
+		}
+	#contact-body {
+		box-sizing:border-box;
+		
+		padding:5em 20%;
+	}
+		#contact-section {
+			background-color:white;
+			height:100%;
+		}
+	
 /* GENERAL ATTRIBUTES */
 .center {
 	display:flex;
