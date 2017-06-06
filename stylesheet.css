@@ -8,7 +8,7 @@ body, html {
 }
 
 div {
-	border-style:dashed;
+	border-style:none;
 	border-width:1px;
 }
 
@@ -99,7 +99,7 @@ ul {
 		border-radius:1em;
 		box-sizing:border-box;
 		width:80%;
-		padding:2em;
+		padding:4vh;
 		
 		transition:background-color 0.25s;
 	}
@@ -125,7 +125,7 @@ ul {
 		padding:2em 0 2em 0;
 	}
 		#about-header-text {
-			background-color:rgba(100,100,100,0.2);
+			background-color:rgba(230,230,230,0.4);
 			padding:0.5em;
 			width:100%;
 			
@@ -151,7 +151,6 @@ ul {
 	}
 		#about-section-wrapper {
 			background-color:rgba(100,100,100,0.2);
-			border:4px solid rgba(255,255,255,0.4);
 			box-sizing:border-box;
 			flex-flow:row wrap;
 			
@@ -160,7 +159,7 @@ ul {
 		}
 			.about-section-component {
 				flex:0.85 1 40%;
-				padding:2em;
+				margin:2em;
 			}
 			#profile-picture {
 				min-width:100%;
@@ -201,7 +200,7 @@ ul {
 	}
 	#projects-body {
 		box-sizing:border-box;
-		padding:2% 10% 4% 10%;
+		padding:2% 10% 10% 10%;
 	}
 		#projects-list {
 			height:100%;
@@ -211,12 +210,12 @@ ul {
 			box-sizing:border-box; /* see if needed */
 		}
 			.projects-item {
-				border:4px solid rgb(150,150,150);
-				border-radius:.4em;
 				width:100%;
 				margin:.8vh 0%;
-			}	
+			}
 			.projects-item a {
+				background-color:rgba(120,120,120,0.2);
+				border-radius:.7em;
 				text-decoration:none;
 				color:initial;
 				
@@ -256,7 +255,7 @@ ul {
 						font-size:1.25em;
 					}
 	div .lang-line {
-		min-height:0.05em;
+		min-height:0.1em;
 		margin:0.8em 0 0.5em 0;
 		width:10em;
 	}
@@ -281,7 +280,7 @@ ul {
 		padding:2em 0 2em 0;
 	}
 		#contact-header-text {
-			background-color:rgba(200,200,200,0.7);
+			background-color:rgba(230,230,230,0.7);
 			padding:0.5em;
 			width:100%;
 			
@@ -297,7 +296,7 @@ ul {
 			transition:background-color 0.2s;
 		}
 		#contact-header-text:hover {
-			background-color:rgba(235,235,235,1);
+			background-color:rgba(230,230,230,1);
 		}
 	#contact-body {
 		box-sizing:border-box;
