@@ -52,27 +52,26 @@ h5 {
 }
 
 /* NAVIGATION BAR */
-ul {
+ul {	
 	margin:0;
 	padding:0;
 	position:fixed;
 	width:100%;
-	overflow:hidden;
 	z-index:10;
 	
 	list-style-type:none;
 	background-color:rgba(0,0,0,0.8);
 }
 	li {
-		float:right;
+		flex:0 0 15vw;	 
 		border-left:1px solid rgba(255,255,255,0.1);
 	}
-	li.left {
-		float:left;
-		border-right:1px solid rgba(255,255,255,0.05);
+	li.leftmost {
+		border:0;
 	}
 	li a {
 		display:block;
+		width:100%;
 		padding:3.4vh;
 		
 		color:rgb(230,230,230);
