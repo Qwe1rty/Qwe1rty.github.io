@@ -310,10 +310,10 @@ ul {
 	#contact-body {
 		box-sizing:border-box;
 		
-		padding:5em 20%;
+		padding:5em 15%;
 	}
 		#contact-section {
-			background-color:rgba(255,255,255,0.6);
+			background-color:rgba(255,255,255,0.75);
 			box-sizing:border-box;
 			padding:2em;
 			height:100%;
@@ -321,6 +321,12 @@ ul {
 			
 			text-align:center;
 		}
+			.contact-section-line {
+				background-color:rgba(254, 58, 100,0.6);
+				min-height:0.1em;
+				margin:0.3em auto 0.3em auto;
+				width:80%;
+			}
 			#contact-section p {
 				margin:5px;
 				font-size:1.25em;
@@ -328,7 +334,8 @@ ul {
 			}
 		
 #footer {
-	
+	background-color:rgb(40,40,40);
+	padding:2em 4em;
 }
 	
 /* GENERAL ATTRIBUTES */
