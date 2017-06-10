@@ -95,7 +95,7 @@ ul {
 
 /* SPLASH SCREEN */
 #splash {
-	background:url(bg-splash.jpg) no-repeat fixed center;
+	background:url(resources/bg-splash.jpg) no-repeat fixed center;
 	background-size:cover;
 	
 	box-sizing:border-box;
@@ -124,7 +124,7 @@ ul {
 
 /* ABOUT SECTION */
 #about {
-	background:url(bg-about.svg) no-repeat center;
+	background:url(resources/bg-about.svg) no-repeat center;
 	background-size:cover;
 	position:relative;
 	padding-top:5em;
@@ -189,12 +189,6 @@ ul {
 					width:40%;
 					margin:auto;
 				}
-	/*
-	#about-footer {
-		padding-top:3em;
-		background-color:rgba(255,255,255,0.2);
-	} 
-	*/
 
 /* PROJECTS SECTION */
 #projects {
@@ -280,7 +274,7 @@ ul {
 		div .lang-misc {background-color:rgb(150,150,150);}
 		
 #contact {
-	background:url(bg-contact.jpg) no-repeat center;
+	background:url(resources/bg-contact.jpg) no-repeat center;
 	background-size:cover;
 	padding-top:5em;
 }
