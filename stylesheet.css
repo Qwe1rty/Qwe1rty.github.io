@@ -189,6 +189,7 @@ ul {	/* length of navbar is 8.8vh */
 #projects {
 	position:relative;
 	padding-top:8.8vh;
+	margin-top:10vh;
 }
 	#projects-header {
 		border-top:4px solid white;
@@ -277,7 +278,7 @@ ul {	/* length of navbar is 8.8vh */
 }
 	#contact-header {
 		background-color:rgba(100,100,100,0.7);
-		padding:2em 0 2em 0;
+		padding:2em 0;
 	}
 		#contact-header-text {
 			background-color:rgba(230,230,230,0.7);
