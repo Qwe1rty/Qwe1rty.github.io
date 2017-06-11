@@ -10,7 +10,7 @@ body, html {
 h1 {
 	font-size:6em;
 	font-family:Raleway,sans-serif;
-	/* font-weight:lighter; */
+	font-weight:lighter;
 	color:rgb(30,30,30);
 	
 	text-shadow:0px 4px 5px rgba(245,245,245,0.35);
@@ -249,8 +249,8 @@ ul {
 					.projects-item-description p {
 						margin:0.2em 0 0.2em 0;
 						
-						color:rgb(30,30,30);
-						font-size:1.25em;
+						color:rgb(75,75,75);
+						font-size:1.2em;
 					}
 	div .lang-line {
 		min-height:0.1em;
