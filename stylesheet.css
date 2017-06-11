@@ -90,7 +90,7 @@ ul {	/* length of navbar is 8.8vh */
 
 /* SPLASH SCREEN */
 #splash {
-	background:url(resources/bg-splash.jpg) no-repeat fixed center;
+	background:url(http://imgur.com/NGKPuNx.jpg) no-repeat fixed center;
 	background-size:cover;
 	
 	box-sizing:border-box;
@@ -119,7 +119,7 @@ ul {	/* length of navbar is 8.8vh */
 
 /* ABOUT SECTION */
 #about {
-	background:url(resources/bg-about.svg) no-repeat center;
+	background:url(https://www.open.wolframcloud.com/objects/f7f9f0aa-3031-49ac-813b-10377e04ee09) no-repeat center;
 	background-size:cover;
 	position:relative;
 	padding-top:8.8vh;
@@ -222,7 +222,7 @@ ul {	/* length of navbar is 8.8vh */
 				
 				display:flex;
 				flex:1 0 0;
-				flex-flow:row wrap;
+				flex-flow:row nowrap;
 				justify-content:space-around;
 				align-items:flex-start;
 				
@@ -271,8 +271,9 @@ ul {	/* length of navbar is 8.8vh */
 		div .lang-html {background-color:rgb(138, 0, 255);}
 		div .lang-misc {background-color:rgb(150,150,150);}
 		
+/* CONTACT SECTION */
 #contact {
-	background:url(resources/bg-contact.jpg) no-repeat center;
+	background:url(http://imgur.com/MvtoNzl.jpg) no-repeat center;
 	background-size:cover;
 	padding-top:8.8vh;
 }
