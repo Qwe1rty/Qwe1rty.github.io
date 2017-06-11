@@ -7,11 +7,6 @@ body, html {
 	font-size:2vh /* do tests */
 }
 
-div {
-	border-style:none;
-	border-width:1px;
-}
-
 h1 {
 	font-size:6em;
 	font-family:Raleway,sans-serif;
@@ -326,11 +321,37 @@ ul {
 				font-size:1.25em;
 				color:rgb(60,60,60);
 			}
+			#contact-section a:link {
+				color:rgba(254, 58, 100,0.8);
+			}
 		
 #footer {
 	background-color:rgb(40,40,40);
-	padding:2em 4em;
+	padding:4em;
 }
+	#footer-wrapper {
+		height:100%;
+		padding:.8em 0;
+		border-top:0.1em solid rgb(150,150,150);
+		border-bottom:0.1em solid rgb(150,150,150);
+		
+		flex-flow:row wrap;
+	}
+		.footer-component {
+			margin:.5em;
+		}
+			#footer-logo {
+				flex:0.6 0 0;
+			}
+			#footer-text {
+				color:rgb(150,150,150);
+				text-align:justify;
+				line-height:1.4em;
+				font-size:1.05em;
+			}
+			#footer-text div {
+				margin:.5em 0;
+			}
 	
 /* GENERAL ATTRIBUTES */
 .center {
