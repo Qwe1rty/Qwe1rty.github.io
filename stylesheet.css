@@ -95,7 +95,9 @@ ul {	/* length of navbar is 8.8vh */
 	
 	box-sizing:border-box;
 	padding:3em;
-	min-height:90vh;
+	height:100vh;
+	
+	flex-flow:column nowrap;
 }
 	#splash-text {
 		background-color:rgba(255,255,255,0.5);
@@ -116,6 +118,20 @@ ul {	/* length of navbar is 8.8vh */
 		margin:auto;
 		background-color:rgba(255,255,255,0.4);
 	}
+	#splash-scroll {
+		box-sizing:border-box;
+		position:absolute;
+		bottom:7vh;
+		
+		color:rgba(255,255,255,0.8);
+		text-align:center;
+		font:1.5em Raleway, sans-serif;
+		
+		transition:font-size 0.2s;
+	}
+	#splash-scroll:hover {
+		font-size:2em;
+	}
 
 /* ABOUT SECTION */
 #about {
@@ -129,7 +145,7 @@ ul {	/* length of navbar is 8.8vh */
 		padding:2em 0;
 	}
 		#about-header-text {
-			background-color:rgba(230,230,230,0.4);
+			background-color:rgba(230,230,230,0.7);
 			padding:0.5em;
 			width:100%;
 			
