@@ -125,12 +125,12 @@ ul {	/* length of navbar is 8.8vh */
 		
 		color:rgba(255,255,255,0.8);
 		text-align:center;
-		font:1.5em Raleway, sans-serif;
+		font:1.3em Raleway, sans-serif;
 		
 		transition:font-size 0.2s;
 	}
 	#splash-scroll:hover {
-		font-size:2em;
+		font-size:1.7em;
 	}
 
 /* ABOUT SECTION */
