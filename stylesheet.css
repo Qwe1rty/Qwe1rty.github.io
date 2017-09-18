@@ -3,13 +3,13 @@ body, html {
 	height:100%;
 	padding:0;
 	margin:0;
-	font-family:Cabin,serif;
+	font-family:Raleway,serif;
 	font-size:2vh /* do tests */
 }
 
 h1 {
-	font-size:6em;
-	font-family:Raleway,sans-serif;
+	font-size:5em;
+	font-family:Cabin,sans-serif;
 	font-weight:lighter;
 	color:rgb(30,30,30);
 	
@@ -102,9 +102,9 @@ ul {	/* length of navbar is 8.8vh */
 	#splash-text {
 		background-color:rgba(255,255,255,0.5);
 		
-		border-radius:1em;
+		/* border-radius:1em; */
 		box-sizing:border-box;
-		width:80%;
+		min-width:80%;
 		padding:4vh;
 		
 		transition:background-color 0.25s;
