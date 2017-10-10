@@ -90,7 +90,7 @@ ul {	/* length of navbar is 8.8vh */
 
 /* SPLASH SCREEN */
 #splash {
-	background:url(http://imgur.com/NGKPuNx.jpg) no-repeat fixed center;
+	background:url(https://imgur.com/NGKPuNx.jpg) no-repeat fixed center;
 	background-size:cover;
 	
 	box-sizing:border-box;
@@ -289,7 +289,7 @@ ul {	/* length of navbar is 8.8vh */
 		
 /* CONTACT SECTION */
 #contact {
-	background:url(http://imgur.com/MvtoNzl.jpg) no-repeat center;
+	background:url(https://imgur.com/MvtoNzl.jpg) no-repeat center;
 	background-size:cover;
 	padding-top:8.8vh;
 }
