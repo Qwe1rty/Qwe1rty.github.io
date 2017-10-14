@@ -281,7 +281,7 @@ ul {	/* length of navbar is 8.8vh */
 		display:inline-block;
 		font-weight:lighter;
 		padding:0 .2em;
-		max-width:8em;
+		max-width:2000em;
 	}
 		div .lang-java {background-color:rgb(253, 134, 37);}
 		div .lang-html {background-color:rgb(138, 0, 255);}
@@ -319,7 +319,7 @@ ul {	/* length of navbar is 8.8vh */
 	#contact-body {
 		box-sizing:border-box;
 		
-		padding:5em 15%;
+		padding:5em 12%;
 	}
 		#contact-section {
 			background-color:rgba(255,255,255,0.75);
@@ -343,6 +343,25 @@ ul {	/* length of navbar is 8.8vh */
 			}
 			#contact-section a:link {
 				color:rgba(254, 58, 100,0.8);
+			}
+			#resume-section {
+				background-color:rgba(155,155,155,0.3);
+				
+				display:inline-block;
+				box-sizing:border-box;
+				padding:.6em .6em .2em .6em;
+				margin:.6em 0 0 0;
+				text-align:center;
+				
+				transition:background-color 0.2s;
+			}
+			#resume-section:hover {
+				background-color:rgba(155,155,155,0.6);
+			}
+			#resume-section-caption {
+				font-family:Raleway, sans-serif;
+				font-weight:bold;
+				color:rgb(230,230,230);
 			}
 		
 #footer {
