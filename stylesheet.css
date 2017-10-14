@@ -85,7 +85,7 @@ ul {	/* length of navbar is 8.8vh */
 		transition:background-color 0.15s;
 	}
 	li a:hover {
-		background-color:rgb(30,30,30);
+		background-color:rgb(20,20,20);
 	}
 
 /* SPLASH SCREEN */
@@ -107,7 +107,7 @@ ul {	/* length of navbar is 8.8vh */
 		min-width:80%;
 		padding:4vh;
 		
-		transition:background-color 0.25s;
+		transition:background-color 0.1s;
 	}
 	#splash-text:hover {
 		background-color:rgba(255,255,255,0.8);
@@ -157,12 +157,12 @@ ul {	/* length of navbar is 8.8vh */
 			text-align:center;
 			font-weight:lighter;
 			color:rgb(70,70,70);
-			
-			transition:background-color 0.2s;
+		}
+/*			transition:background-color 0.2s;
 		}
 		#about-header-text:hover {
 			background-color:rgba(230,230,230,1);
-		}
+		} */
 	#about-body {
 		padding:4% 10% 4% 10%;
 		overflow:auto;
@@ -252,7 +252,7 @@ ul {	/* length of navbar is 8.8vh */
 				justify-content:space-around;
 				align-items:flex-start;
 				
-				transition:background-color 0.25s;
+				transition:background-color 0.15s;
 			}
 			.projects-item a:hover {
 				background-color:rgba(120,120,120,0.3);
@@ -320,12 +320,12 @@ ul {	/* length of navbar is 8.8vh */
 			text-align:center;
 			font-weight:lighter;
 			color:rgb(30,30,30);
-			
-			transition:background-color 0.2s;
+		}
+/*			transition:background-color 0.2s;
 		}
 		#contact-header-text:hover {
 			background-color:rgba(230,230,230,1);
-		}
+		} */
 	#contact-body {
 		box-sizing:border-box;
 		
@@ -354,25 +354,29 @@ ul {	/* length of navbar is 8.8vh */
 			#contact-section a:link {
 				color:rgba(254, 58, 100,0.8);
 			}
-			#resume-section {
-				background-color:rgba(155,155,155,0.3);
-				
-				display:inline-block;
-				box-sizing:border-box;
-				padding:.6em .6em .2em .6em;
-				margin:.6em 0 0 0;
-				text-align:center;
-				
-				transition:background-color 0.2s;
-			}
-			#resume-section:hover {
-				background-color:rgba(155,155,155,0.6);
-			}
-			#resume-section-caption {
-				font-family:Raleway, sans-serif;
-				font-weight:bold;
-				color:rgb(230,230,230);
-			}
+			
+				#resume-section-wrapper a {
+					color:rgba(0,0,0,0);
+				}
+				#resume-section {
+					background-color:rgba(155,155,155,0.3);
+					
+					display:inline-block;
+					box-sizing:border-box;
+					padding:.8em .8em .4em .8em;
+					margin:.8em 0;
+					text-align:center;
+					
+					transition:background-color 0.1s;
+				}
+				#resume-section:hover {
+					background-color:rgba(155,155,155,0.6);
+				}
+				#resume-section-caption {
+					font-family:Raleway, sans-serif;
+					font-weight:bold;
+					color:rgb(230,230,230);
+				}
 		
 #footer {
 	background-color:rgb(40,40,40);
