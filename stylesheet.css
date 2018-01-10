@@ -293,8 +293,9 @@ ul {	/* length of navbar is 8.8vh */
 		padding:0 .2em;
 		max-width:2000em;
 	}
+		div .lang-ccpp {background-color:rgb(102, 153, 0);}
 		div .lang-java {background-color:rgb(253, 134, 37);}
-		div .lang-html {background-color:rgb(138, 0, 255);}
+		div .lang-html {background-color:rgb(153, 0, 153);}
 		div .lang-misc {background-color:rgb(150,150,150);}
 		
 /* CONTACT SECTION */
@@ -377,7 +378,8 @@ ul {	/* length of navbar is 8.8vh */
 					font-weight:bold;
 					color:rgb(230,230,230);
 				}
-		
+
+/* FOOTER */				
 #footer {
 	background-color:rgb(40,40,40);
 	padding:4em;
@@ -394,16 +396,18 @@ ul {	/* length of navbar is 8.8vh */
 			margin:.5em;
 		}
 			#footer-logo {
-				flex:0.6 0 0;
+				flex: 1 0 0;
+				max-width: 10vw;
 			}
 			#footer-text {
 				color:rgb(150,150,150);
 				text-align:justify;
 				line-height:1.4em;
-				font-size:1.05em;
+				font-size:0.9em;
+				flex: 2	0 0;
 			}
 			#footer-text div {
-				margin:.5em 0;
+				margin:.5em 0
 			}
 	
 /* GENERAL ATTRIBUTES */
