@@ -110,7 +110,8 @@ ul {	/* length of navbar is 8.8vh */
 		transition:background-color 0.1s;
 	}
 	#splash-text:hover {
-		background-color:rgba(255,255,255,0.8);
+		background-color:rgba(255,255,255,0.6);
+		cursor: default;
 	}
 	#splash-line {
 		min-height:0.1em;
@@ -396,15 +397,15 @@ ul {	/* length of navbar is 8.8vh */
 			margin:.5em;
 		}
 			#footer-logo {
+				/*max-width: 15vw;*/
 				flex: 1 0 0;
-				max-width: 10vw;
 			}
-			#footer-text {
+			#footer-text {	
 				color:rgb(150,150,150);
 				text-align:justify;
 				line-height:1.4em;
-				font-size:0.9em;
-				flex: 2	0 0;
+				font-size: 0.9em;
+				/*flex: 2.5 0 0;*/
 			}
 			#footer-text div {
 				margin:.5em 0
