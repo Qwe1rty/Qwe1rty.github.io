@@ -4,7 +4,7 @@ body, html {
 	padding:0;
 	margin:0;
 	font-family:Raleway,serif;
-	font-size:2vh /* do tests */
+	font-size:1.9vh /* do tests */
 }
 
 h1 {
@@ -162,11 +162,6 @@ ul {	/* length of navbar is 8.8vh */
 			font-weight:lighter;
 			color:rgb(70,70,70);
 		}
-/*			transition:background-color 0.2s;
-		}
-		#about-header-text:hover {
-			background-color:rgba(230,230,230,1);
-		} */
 	#about-body {
 		padding:4% 10% 4% 10%;
 		overflow:auto;
@@ -205,13 +200,13 @@ ul {	/* length of navbar is 8.8vh */
 					margin:auto;
 				}
 
-/* PROJECTS SECTION */
-#projects {
+/* PORTFOLIO SECTION */
+#portfolio {
 	position:relative;
 	padding-top:8.8vh;
 	margin-top:10vh;
 }
-	#projects-header {
+	#portfolio-header {
 		border-top:4px solid white;
 		padding:2em 0;
 		
@@ -219,7 +214,7 @@ ul {	/* length of navbar is 8.8vh */
 		font-weight:lighter;
 		color:rgb(60,60,60);
 	}
-		#projects-header-text {
+		#portfolio-header-text {
 			padding:0.5em;
 			width:100%;
 			
@@ -229,22 +224,22 @@ ul {	/* length of navbar is 8.8vh */
 			font-weight:lighter;
 			color:rgb(30,30,30);
 		}
-	#projects-body {
+	#portfolio-body {
 		box-sizing:border-box;
 		padding:2% 10% 10% 10%;
 	}
-		#projects-list {
+		#portfolio-list {
 			height:100%;
 			
 			display:flex;
 			flex-flow:column nowrap;
 			box-sizing:border-box; /* see if needed */
 		}
-			.projects-item {
+			.portfolio-item {
 				width:100%;
 				margin:.8vh 0%;
 			}
-			.projects-item a {
+			.portfolio-item a {
 				background-color:rgba(120,120,120,0.2);
 				border-radius:.7em;
 				text-decoration:none;
@@ -258,10 +253,10 @@ ul {	/* length of navbar is 8.8vh */
 				
 				transition:background-color 0.15s;
 			}
-			.projects-item a:hover {
+			.portfolio-item a:hover {
 				background-color:rgba(120,120,120,0.3);
 			}
-				.projects-item-thumbnail {
+				.portfolio-item-thumbnail {
 					border-radius:.4em;
 					margin:1em;
 					min-width:10vw;
@@ -274,12 +269,12 @@ ul {	/* length of navbar is 8.8vh */
 						width:100%;
 						height:auto;
 					}
-				.projects-item-description {
+				.portfolio-item-description {
 					margin:1em 1em 1em 0;	
 					flex:1 15 70%;
 					flex-flow:column nowrap;
 				}
-					.projects-item-description p {
+					.portfolio-item-description p {
 						margin:0.2em 0 0.2em 0;
 						
 						color:rgb(75,75,75);
@@ -297,10 +292,10 @@ ul {	/* length of navbar is 8.8vh */
 		padding:0 .2em;
 		max-width:2000em;
 	}
-		div .lang-ccpp {background-color:rgb(102, 153, 0);}
-		div .lang-java {background-color:rgb(253, 134, 37);}
-		div .lang-html {background-color:rgb(153, 0, 153);}
-		div .lang-misc {background-color:rgb(150,150,150);}
+	div .lang-ccpp {background-color:rgb(102, 153, 0);}
+	div .lang-java {background-color:rgb(253, 134, 37);}
+	div .lang-html {background-color:rgb(153, 0, 153);}
+	div .lang-misc {background-color:rgb(150,150,150);}
 		
 /* CONTACT SECTION */
 #contact {
@@ -326,11 +321,6 @@ ul {	/* length of navbar is 8.8vh */
 			font-weight:lighter;
 			color:rgb(30,30,30);
 		}
-/*			transition:background-color 0.2s;
-		}
-		#contact-header-text:hover {
-			background-color:rgba(230,230,230,1);
-		} */
 	#contact-body {
 		box-sizing:border-box;
 		
@@ -356,9 +346,9 @@ ul {	/* length of navbar is 8.8vh */
 				font-size:1.25em;
 				color:rgb(60,60,60);
 			}
-			#contact-section a:link {
+			/* #contact-section a:link {
 				color:rgba(254, 58, 100,0.8);
-			}
+			} */
 			
 				#resume-section-wrapper a {
 					color:rgba(0,0,0,0);
@@ -382,6 +372,22 @@ ul {	/* length of navbar is 8.8vh */
 					font-weight:bold;
 					color:rgb(230,230,230);
 				}
+		.fab {
+			padding: .3em;
+			margin: .25em .25em;
+			width: 1em;
+			border-radius: 50%;
+
+			font-size: 2.5em;
+			text-align: center;
+			text-decoration: none;
+
+			background-color:rgba(155,155,155,0.45);
+			color: white;
+		}
+		.fab:hover {
+			background-color:rgba(155,155,155,0.85);
+		}
 
 /* FOOTER */				
 #footer {
