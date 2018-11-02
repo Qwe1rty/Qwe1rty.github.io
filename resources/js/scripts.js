@@ -23,26 +23,33 @@ function init()
 // g(x) = ------------- * sin( ----------------- )
 //        2 * duration       (      duration     )
 //
-// Taking the integral of this function w/ respect to time_elapsed from 0 to duration = duration
+// Taking the integral of this function w/ respect to time_elapsed from 0 to duration = distance
 //    /\ duration
-//   |           g(x) dx = duration
+//   |           g(x) dx = distance
 // \/ 0
 function scroll(elementId)
 {
     // Adjustment object for easier tracking of everything
     function Adjustment(oldTime, newTime)
     {
-        this.oldTime = oldTime;
-        this.newTime = newTime;
+        this.a = determineA();
+        this.x = determineX();
+        this.adjustment = determineAdjustment(this.a, this.x);
+
+        function determineA() {
+            return (Math.PI * Adjustment.distance) / (2 * Adjustment.duration);
+        }
+        function determineX() {
+            return (Math.PI * (((oldTime + newTime) / 2) - Adjustment.initialTime)) / Adjustment.duration;
+        }
+        function determineAdjustment(a, x) {
+            return Math.round((newTime - oldTime) * (a * Math.sin(x)));
+        }
     }
-    Adjustment.prototype.getA = function() {
-        return (Math.PI * Adjustment.distance) / (2 * Adjustment.duration);
-    }
-    Adjustment.prototype.getX = function() {
-        return (Math.PI * (((this.oldTime + this.newTime) / 2) - Adjustment.initialTime)) / Adjustment.duration;
-    }
-    Adjustment.prototype.findAdjustment = function() {
-        return (this.newTime - this.oldTime) * (this.getA() * Math.sin(this.getX()));
+
+    // Get the next adjustment
+    Adjustment.prototype.getAdjustment = function() {
+        return this.adjustment;
     }
 
     Adjustment.duration = 500;
@@ -50,9 +57,11 @@ function scroll(elementId)
     Adjustment.distance = Adjustment.destination - window.pageYOffset;
     Adjustment.initialTime = performance.now();
 
+    
     // Initialize variables
-    let oldTime = performance.now();
-    let scrollCount = 0;
+    let scrollCountAngle = 0;       // Keeps track of the amount travelled relative to the sine function
+    let scrollCountDistance = 0;    // Keeps track of the absolute distance travelled
+    let oldTime = Adjustment.initialTime;
 
     // Scroll function
     function step(newTime)
@@ -60,21 +69,26 @@ function scroll(elementId)
         let adjustment = new Adjustment(oldTime, newTime);
 
         // Determine location on page to jump to, and keep track of total distance travelled
-        window.scrollTo(0, adjustment.findAdjustment() + window.pageYOffset);
-        scrollCount += Math.PI / (Adjustment.duration / (newTime - oldTime));
-        oldTime = newTime;
+        scrollCountAngle += Math.PI / (Adjustment.duration / (newTime - oldTime));
+        scrollCountDistance += adjustment.getAdjustment();
 
-        // DEBUGGING STUFF
-        console.log("oldTime: " + oldTime + ", newTime: " + newTime + ", scrollAdjustment: " + adjustment.findAdjustment());
-        console.log("getX: " + adjustment.getX() + ", getA: " + adjustment.getA() + ", scrollCount: " + scrollCount);
-
-        // Stop if destination is reached
-        if (scrollCount >= Math.PI)
+        // Stop if destination is reached.
+        // Or, if the next jump will go over the destination, go to the destination directly
+        if (scrollCountAngle >= Math.PI ||
+            Math.abs(scrollCountDistance) >= Math.abs(Adjustment.distance))
         {
-            // TODO: make this not so sudden near the end
             window.scrollTo(0, Adjustment.destination);
             return;
         }
+
+        // Scroll to the next determined location, and establish the new "old time"
+        window.scrollTo(0, adjustment.getAdjustment() + window.pageYOffset);
+        oldTime = newTime;
+
+        // DEBUGGING STUFF
+        // console.log("oldTime: " + oldTime + ", newTime: " + newTime + ", scrollAdjustment: " + adjustment.getAdjustment());
+        // console.log("getX: " + adjustment.x + ", getA: " + adjustment.a + ", scrollCountAngle: " + scrollCountAngle);
+
         window.requestAnimationFrame(step);
     }
 
