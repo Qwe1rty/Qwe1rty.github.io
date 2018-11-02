@@ -69,22 +69,21 @@ ul {	/* length of navbar is 8.8vh */
 	li {
 		flex:0 0 15vw;	 
 		border-left:1px solid rgba(255,255,255,0.1);
+
+		display:block;
+		width:100%;
+		padding:3.4vh;
+
+		color:rgb(230,230,230);
+		text-align:center;
+		text-decoration:none;
+
+		transition:background-color 0.15s;
 	}
 	li.leftmost {
 		border:0;
 	}
-	li a {
-		display:block;
-		width:100%;
-		padding:3.4vh;
-		
-		color:rgb(230,230,230);
-		text-align:center;
-		text-decoration:none;
-		
-		transition:background-color 0.15s;
-	}
-	li a:hover {
+	li:hover {
 		background-color:rgb(20,20,20);
 	}
 
@@ -96,13 +95,14 @@ ul {	/* length of navbar is 8.8vh */
 	box-sizing:border-box;
 	padding:3em;
 	height:100vh;
-	
+
 	flex-flow:column nowrap;
 }
 	#splash-text {
 		background-color:rgba(255,255,255,0.5);
 		
 		/* border-radius:1em; */
+		/*position:fixed;*/
 		box-sizing:border-box;
 		min-width:80%;
 		padding:4vh;
@@ -120,8 +120,8 @@ ul {	/* length of navbar is 8.8vh */
 		background-color:rgba(255,255,255,0.4);
 	}
 	#splash-scroll {
-		box-sizing:border-box;
 		position:absolute;
+		box-sizing:border-box;
 		bottom:7vh;
 		
 		text-align:center;

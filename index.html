@@ -11,22 +11,30 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+
+		<script src="scripts.js"></script>
 	</head>
 		
-	<body>
+	<body onload="init();">
 		<!-- NAVIGATION BAR -->
 		<ul class="center">
-			<li class="center leftmost"><a href="#splash">HOME</a></li>
-			<li class="center"><a href="#about">ABOUT</a></li>
-			<li class="center"><a href="#portfolio">PORTFOLIO</a></li>
-			<li class="center"><a href="#contact">CONTACT</a></li>
+			<!--
+			<li id="nav-splash" class="center leftmost"><a href="#splash">HOME</a></li>
+			<li id="nav-about" class="center"><a href="#about">ABOUT</a></li>
+			<li id="nav-portfolio" class="center"><a href="#portfolio">PORTFOLIO</a></li>
+			<li id="nav-contact" class="center"><a href="#contact">CONTACT</a></li>
+			-->
+			<li id="nav-splash" class="center leftmost">HOME</li>
+			<li id="nav-about" class="center">ABOUT</li>
+			<li id="nav-portfolio" class="center">PORTFOLIO</li>
+			<li id="nav-contact" class="center">CONTACT</li>
 		</ul>
 		
 		<!-- SPLASH/HOME -->
 		<div class="center" id="splash">
 		
 			<div id="splash-text">
-				<h1>Caleb Choi	</h1>
+				<h1>Caleb Choi</h1>
 				<div id="splash-line"></div>
 				<h5>Welcome to my personal website! Enjoy your stay</h5>
 			</div>
