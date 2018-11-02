@@ -43,7 +43,7 @@ function scroll(elementId)
             return (Math.PI * (((oldTime + newTime) / 2) - Adjustment.initialTime)) / Adjustment.duration;
         }
         function determineAdjustment(a, x) {
-            return Math.round((newTime - oldTime) * (a * Math.sin(x)));
+            return (newTime - oldTime) * (a * Math.sin(x));
         }
     }
 
@@ -57,37 +57,50 @@ function scroll(elementId)
     Adjustment.distance = Adjustment.destination - window.pageYOffset;
     Adjustment.initialTime = performance.now();
 
-    
+
     // Initialize variables
     let scrollCountAngle = 0;       // Keeps track of the amount travelled relative to the sine function
-    let scrollCountDistance = 0;    // Keeps track of the absolute distance travelled
     let oldTime = Adjustment.initialTime;
 
     // Scroll function
     function step(newTime)
     {
+        // Set adjustment and determine next jump location
         let adjustment = new Adjustment(oldTime, newTime);
+        let jumpLocation = adjustment.getAdjustment() + window.pageYOffset;
 
-        // Determine location on page to jump to, and keep track of total distance travelled
+        // Keep track of total distance travelled
         scrollCountAngle += Math.PI / (Adjustment.duration / (newTime - oldTime));
-        scrollCountDistance += adjustment.getAdjustment();
+
+        // A function that determines if the destination has been reached/surpassed
+        function destinationReached(jumpLocation)
+        {
+            // Checks if the integral has reached the end
+            if (scrollCountAngle >= Math.PI) return true;
+
+            // Checks to see if next jump will surpass the destination point
+            return Adjustment.distance < 0 ?
+                jumpLocation < Adjustment.destination :
+                jumpLocation >= Adjustment.destination ;
+        }
 
         // Stop if destination is reached.
         // Or, if the next jump will go over the destination, go to the destination directly
-        if (scrollCountAngle >= Math.PI ||
-            Math.abs(scrollCountDistance) >= Math.abs(Adjustment.distance))
+        if (destinationReached(jumpLocation))
         {
             window.scrollTo(0, Adjustment.destination);
             return;
         }
 
-        // Scroll to the next determined location, and establish the new "old time"
+        // Scroll to the next determined location and update "old time"
         window.scrollTo(0, adjustment.getAdjustment() + window.pageYOffset);
         oldTime = newTime;
 
         // DEBUGGING STUFF
-        // console.log("oldTime: " + oldTime + ", newTime: " + newTime + ", scrollAdjustment: " + adjustment.getAdjustment());
-        // console.log("getX: " + adjustment.x + ", getA: " + adjustment.a + ", scrollCountAngle: " + scrollCountAngle);
+        // console.log("oldTime: " + oldTime + ", newTime: " + newTime + ", timeDifference: " + (newTime - oldTime));
+        // console.log("scrollAdjustment: " + adjustment.getAdjustment() + ", getX: " + adjustment.x + ", getA: " + adjustment.a);
+        // console.log("scrollCountAngle: " + scrollCountAngle + ", scrollCountDistance " + scrollCountDistance, ", distance: " + Adjustment.distance);
+        // console.log("destination: " + Adjustment.destination + ", pageYOffset: " + window.pageYOffset);
 
         window.requestAnimationFrame(step);
     }
