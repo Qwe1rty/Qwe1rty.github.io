@@ -29,6 +29,8 @@ function init()
 // \/ 0
 function scroll(elementId)
 {
+    // TODO: oldTime & newTime difference needs to still be more accurate
+
     // Adjustment object for easier tracking of everything
     function Adjustment(oldTime, newTime)
     {
@@ -46,16 +48,11 @@ function scroll(elementId)
             return (newTime - oldTime) * (a * Math.sin(x));
         }
     }
-
-    // Get the next adjustment
-    Adjustment.prototype.getAdjustment = function() {
-        return this.adjustment;
-    }
-
-    Adjustment.duration = 500;
-    Adjustment.destination = document.getElementById(elementId).offsetTop;
-    Adjustment.distance = Adjustment.destination - window.pageYOffset;
-    Adjustment.initialTime = performance.now();
+    Adjustment.prototype.getAdjustment  = function() {return this.adjustment;}
+    Adjustment.duration                 = 500;
+    Adjustment.destination              = document.getElementById(elementId).offsetTop;
+    Adjustment.distance                 = Adjustment.destination - window.pageYOffset;
+    Adjustment.initialTime              = performance.now();
 
 
     // Initialize variables
