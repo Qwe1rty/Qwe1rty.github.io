@@ -1,3 +1,4 @@
+// Initialize event listeners and global vars
 function init()
 {
     // Initialize variables representing navbar elements
@@ -11,6 +12,9 @@ function init()
     navAbout.addEventListener("click", function() {scroll("about")}, false);
     navPortfolio.addEventListener("click", function() {scroll("portfolio")}, false);
     navContact.addEventListener("click", function() {scroll("contact")}, false);
+
+    // Declares status flag for if the page is currently being scrolled from navbar buttons
+    window.isScrolling = false;
 
     console.log("init() has finished");
 }
@@ -30,6 +34,10 @@ function init()
 function scroll(elementId)
 {
     // TODO: oldTime & newTime difference needs to still be more accurate
+
+    // Prevents the scrolling from breaking if by spamming the navbar buttons
+    if (window.isScrolling) return;
+    window.isScrolling = true;
 
     // Adjustment object for easier tracking of everything
     function Adjustment(oldTime, newTime)
@@ -86,6 +94,7 @@ function scroll(elementId)
         if (destinationReached(jumpLocation))
         {
             window.scrollTo(0, Adjustment.destination);
+            window.isScrolling = false;
             return;
         }
 
@@ -96,8 +105,8 @@ function scroll(elementId)
         // DEBUGGING STUFF
         // console.log("oldTime: " + oldTime + ", newTime: " + newTime + ", timeDifference: " + (newTime - oldTime));
         // console.log("scrollAdjustment: " + adjustment.getAdjustment() + ", getX: " + adjustment.x + ", getA: " + adjustment.a);
-        // console.log("scrollCountAngle: " + scrollCountAngle + ", scrollCountDistance " + scrollCountDistance, ", distance: " + Adjustment.distance);
-        // console.log("destination: " + Adjustment.destination + ", pageYOffset: " + window.pageYOffset);
+        // console.log("scrollCountAngle: " + scrollCountAngle + ", distance: " + Adjustment.distance);
+        // console.log("destination: " + Adjustment.destination + ", pageYOffset: " + window.pageYOffset + ", isScrolling: " + isScrolling);
 
         window.requestAnimationFrame(step);
     }
