@@ -124,18 +124,17 @@ ul {	/* length of navbar is 8.8vh */
 		position:absolute;
 		box-sizing:border-box;
 		bottom:7vh;
-		
-		text-align:center;
-		font:1.3em Raleway, sans-serif;
+
+        cursor: pointer;
+        font:1.3em Raleway, sans-serif;
+        color: rgb(245, 245, 245);
+        text-decoration: none;
+        text-align:center;
 		
 		transition:font-size 0.2s;
 	}
 	#splash-scroll:hover {
 		font-size:1.5em;
-	}
-	#scroll-tag {
-		color: rgb(245, 245, 245);
-		text-decoration: none;
 	}
 
 /* ABOUT SECTION */

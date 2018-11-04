@@ -6,12 +6,14 @@ function init()
     let navAbout = document.getElementById("nav-about");
     let navPortfolio = document.getElementById("nav-portfolio");
     let navContact = document.getElementById("nav-contact");
+    let splashScroll = document.getElementById("splash-scroll");
 
     // Add event listeners to the navbar elements so they go to the specified part of the page
     navSplash.addEventListener("click", function() {scroll("splash")}, false);
     navAbout.addEventListener("click", function() {scroll("about")}, false);
     navPortfolio.addEventListener("click", function() {scroll("portfolio")}, false);
     navContact.addEventListener("click", function() {scroll("contact")}, false);
+    splashScroll.addEventListener("click", function() {scroll("about")}, false);
 
     // Declares status flag for if the page is currently being scrolled from navbar buttons
     window.isScrolling = false;
