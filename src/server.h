@@ -5,13 +5,13 @@
 
 using namespace Cutelyst;
 
-class server : public Application
+class Server : public Application
 {
     Q_OBJECT
     CUTELYST_APPLICATION(IID "server")
 public:
-    Q_INVOKABLE explicit server(QObject *parent = nullptr);
-    ~server();
+    Q_INVOKABLE explicit Server(QObject *parent = nullptr);
+    ~Server();
 
     bool init();
 };

@@ -1,21 +1,21 @@
 #include "server.h"
 
 #include "root.h"
+#include "api.h"
 
 using namespace Cutelyst;
 
-server::server(QObject *parent) : Application(parent)
+Server::Server(QObject *parent) : Application(parent)
 {
 }
 
-server::~server()
+Server::~Server()
 {
 }
 
-bool server::init()
+bool Server::init()
 {
-    new Root(this);
-
+    new API(this);
     return true;
 }
 
