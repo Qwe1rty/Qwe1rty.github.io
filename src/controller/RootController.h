@@ -11,7 +11,7 @@ class RootController : public Controller
     C_NAMESPACE("")
 public:
     explicit RootController(QObject *parent = nullptr);
-    ~RootController();
+    ~RootController() override = default;
 
     C_ATTR(index, :Path :AutoArgs)
     void index(Context *c);
