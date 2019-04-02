@@ -11,7 +11,7 @@ add_library(server SHARED ${server_SRCS})
 # Link to Cutelyst
 target_link_libraries(server
     Cutelyst::Core
-    Cutelyst::View::Grantlee
+    Cutelyst::StaticSimple
     Qt5::Core
     Qt5::Network
 )

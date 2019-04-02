@@ -11,9 +11,9 @@ class Server : public Application
     CUTELYST_APPLICATION(IID "server")
 public:
     Q_INVOKABLE explicit Server(QObject *parent = nullptr);
-    ~Server();
+    ~Server() override;
 
-    bool init();
+    bool init() override;
 };
 
 #endif //SERVER_H
