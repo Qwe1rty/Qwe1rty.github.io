@@ -14,7 +14,7 @@ void RootController::index(Context *c)
     auto response = c->response();
     auto uri = c->uriFor("index.html");
 
-    qCDebug(ROOT_CONTROLLER) << "Redirect URI: " << uri;
+    qCInfo(ROOT_CONTROLLER) << "Redirecting to URL: " << uri;
     response->redirect(uri);
 
     qCDebug(ROOT_CONTROLLER) << "Response object header: "
